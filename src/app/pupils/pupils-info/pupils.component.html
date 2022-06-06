@@ -1,0 +1,40 @@
+<div class="container">
+    <h3>Pupils list</h3>
+
+      <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+        <body>
+        
+        <table class="table">
+          <tr>
+            <th>Id</th>
+            <th>Name</th> 
+            <th>Age</th>
+            <th>City</th>
+            <th>classes</th>
+            <th>Subjects and grades</th>
+            <th>Image</th>
+            <th>Edit</th>
+          </tr>
+          <tr [ngClass]="{'red': pupil.avg() < 65,'blue': pupil.avg() >= 65}" *ngFor="let pupil of pupils">
+              <td>{{ pupil.id }}</td>
+              <td>{{ pupil.fullName }}</td>
+              <td>{{ pupil.age }}</td>
+              <td>{{ pupil.city }}</td>
+              <td>{{ pupil.classes }}</td>
+              <td>{{ pupil.grades }}</td>
+              <td>
+                  <img src="{{ pupil.image }}">
+              </td>
+              <td> <button class="button" [routerLink]="['/pupil', pupil.id]">Edit details</button></td>
+        
+          </tr>
+         
+        </table>
+        
+        </body>
+        
+</div>

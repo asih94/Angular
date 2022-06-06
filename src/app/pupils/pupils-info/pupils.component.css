@@ -1,0 +1,27 @@
+h3{
+  color: cadetblue;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  table{
+    background-color: coral;
+    font-weight: 500;
+  }
+
+   .red{
+     background-color: rgb(236, 63, 63);
+   }
+
+   .blue{
+     background-color: rgb(71, 71, 231);
+   }

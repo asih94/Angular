@@ -1,0 +1,76 @@
+<div class="container">
+    <h3>Edit teacher details</h3>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>id:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.id" /> 
+        <h5>{{ teacher.id }}</h5> 
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>name:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.fullName" />
+        <h5>{{ teacher.fullName }}</h5>
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>age:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.age" />
+        <h5>{{ teacher.age }}</h5> 
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>city:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.city" />     
+        <h5>{{ teacher.city }}</h5> 
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>subjects:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.subject" />
+        <h5>{{ teacher.subject }}</h5> 
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>classes:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.classes" />
+        <h5>{{ teacher.classes }}</h5> 
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>seniority:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.seniority" />
+        <h5>{{ teacher.seniority }}</h5> 
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>numOfHours:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.numOfHours" />
+        <h5>{{ teacher.numOfHours }}</h5> 
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>hourSalary:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.hourSalary" />
+        <h5>{{ teacher.hourSalary }}</h5> 
+    </div>
+
+    <div *ngIf="teacher | async as teacher">
+        <h4>image:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="teacher.image" />
+        <img src="{{ teacher.image }}">
+        <h5>{{ teacher.image }}</h5> 
+    </div>
+    
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+</div>

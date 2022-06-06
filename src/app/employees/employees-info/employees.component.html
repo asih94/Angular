@@ -1,0 +1,45 @@
+<div class="container">
+    <h3>Employees list</h3>
+
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<body>
+
+<table class="table">
+  <tr>
+    <th>Id</th>
+    <th>Name</th> 
+    <th>Age</th>
+    <th>City</th>
+    <th>Name of work</th>
+    <th>Number of hours in month</th>
+    <th>Salary for hour</th>
+    <th>Monthly salary</th>
+    <th>Image</th>
+  </tr>
+  <tr *ngFor="let employee of employees" [ngClass]="{'red':employee.salaryForHour*employee.numOfHourMonth < 3000, 'blue': employee.salaryForHour*employee.numOfHourMonth > 3000}" >
+    <a [routerLink]="['/employee', employee.id]">  
+    <td>{{ employee.id }}</td></a>
+    <td>{{ employee.fullName }}</td>
+    <td>{{ employee.age }}</td>
+    <td>{{ employee.city }}</td>
+    <td>{{ employee.workName }}</td>
+    <td>{{ employee.numOfHourMonth }}</td>
+    <td>{{ employee.salaryForHour }}&#8362;</td>
+    <td>{{ employee.salaryForHour*employee.numOfHourMonth }}&#8362;
+    </td>
+    <td>
+        <img src="{{ employee.image }}"></td>
+  </tr>
+ 
+</table>
+
+</body>
+
+</div>
+
+<!--(click)= "changeColor()" [style.background]="color"-->
+

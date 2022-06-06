@@ -1,0 +1,21 @@
+<div class="container" align="center">
+    <h3>Employee details</h3>
+
+    <div class="card" *ngIf="employee | async as employee">
+        <img src="{{ employee.image }}" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>{{ employee.fullName }}</b></h4>
+          <h5>Id: {{ employee.id }}</h5> 
+          <h5>Age: {{ employee.age }}</h5> 
+          <h5>City: {{ employee.city }}</h5> 
+          <h5>Work name: {{ employee.workName }}</h5> 
+          <h5>Numbe of hour in month: {{ employee.numOfHourMonth }}</h5>  
+          <h5>Salary for hour: {{ employee.salaryForHour }}</h5> 
+        </div>
+
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+
+    </div>
+</div>
+
+

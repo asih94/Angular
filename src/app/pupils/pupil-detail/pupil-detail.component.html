@@ -1,0 +1,56 @@
+<div class="container">
+    <h3>Edit pupil details</h3>
+
+    <div *ngIf="pupil | async as pupil">
+        <h4>id:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="pupil.id" /> 
+        <h5>{{ pupil.id }}</h5> 
+    </div>
+
+    <div *ngIf="pupil | async as pupil">
+        <h4>name:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="pupil.fullName" />
+        <h5>{{ pupil.fullName }}</h5>
+    </div>
+
+    <div *ngIf="pupil | async as pupil">
+        <h4>age:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="pupil.age" />
+        <h5>{{ pupil.age }}</h5> 
+    </div>
+
+    <div *ngIf="pupil | async as pupil">
+        <h4>city:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="pupil.city" />
+        <h5>{{ pupil.city }}</h5> 
+    </div>
+
+    <div *ngIf="pupil | async as pupil">
+        <h4>classes:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="pupil.classes" />
+        <h5>{{ pupil.classes }}</h5> 
+    </div>
+
+    <div *ngIf="pupil | async as pupil">
+        <h4>grades:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="pupil.grades" />
+        <h5>{{ pupil.grades }}</h5> 
+    </div>
+
+    <div *ngIf="pupil | async as pupil">
+        <h4>image:</h4>
+        <input class="form-control" type="text"
+        [(ngModel)]="pupil.image"/>
+        <img src="{{ pupil.image }}">
+        <h5>{{ pupil.image }}</h5> 
+    </div>
+
+
+    <button class="btn btn-secondary" (click)="goBack()">Back</button>
+</div>

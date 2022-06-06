@@ -1,0 +1,22 @@
+<div class="container">
+    <h3>Teachers list</h3>
+
+    <div class="card text-white bg-info mb-3" style="width: 18rem;">
+        <div class="card-body">
+            <ul class="list-group">
+                <li *ngFor="let teacher of teachers" class="list-group-item">
+                        <h5>Id: {{ teacher.id }}</h5>
+                        <h5>Name: {{ teacher.fullName }}</h5>
+                        <h5>Age: {{ teacher.age }}</h5> <h5>City: {{ teacher.city }}</h5>  
+                        <h5>Subjects: {{ teacher.subject }}</h5> <h5>{{ teacher.classes }}</h5> 
+                        <h5>Seniority: {{ teacher.seniority }}</h5> <h5>Number of hours in month: {{ teacher.numOfHours }}</h5> 
+                        <h5>Salar for hour: {{ teacher.hourSalary }}&#8362;
+                        </h5> <h5>Monthly salary: {{ teacher.hourSalary*teacher.numOfHours }}&#8362;</h5>
+                        <img src="{{ teacher.image }}"/>
+                        <button class="button" [routerLink]="['/teacher',teacher.id]">Edit details</button>
+                 
+                </li>
+            </ul>
+        </div>
+      </div>
+</div>
